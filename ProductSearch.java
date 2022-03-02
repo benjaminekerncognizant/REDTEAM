@@ -19,18 +19,18 @@ public class ProductSearch extends Search{
 	public void setProductName(String productName) {
 		ProductName = productName;
 	}
-	
-	public ProductSearch(double price, String categoryId, String supplierId, String productId) {
-		super(price, categoryId, supplierId, productId);
-		// TODO Auto-generated constructor stub
-	}
-	
-	public ProductSearch(double price, String categoryId, String supplierId, String productId,
-			String productDescription, String productName) {
+
+	public ProductSearch(double price, long categoryId, long supplierId, long productId, String productDescription,
+			String productName) {
 		super(price, categoryId, supplierId, productId);
 		this.productDescription = productDescription;
 		ProductName = productName;
 	}
 
+	public ProductSearch(double price, long categoryId, long supplierId, long productId) {
+		super(price, categoryId, supplierId, productId);
+		// TODO Auto-generated constructor stub
+	}
 
+	
 }

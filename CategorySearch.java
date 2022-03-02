@@ -19,19 +19,19 @@ public class CategorySearch extends Search {
 	public void setCategoryName(String categoryName) {
 		this.categoryName = categoryName;
 	}
-	
-	public CategorySearch(double price, String categoryId, String supplierId, String productId) {
-		super(price, categoryId, supplierId, productId);
-		// TODO Auto-generated constructor stub
-	}
-	
-	public CategorySearch(double price, String categoryId, String supplierId, String productId,
-			String categoryDescription, String categoryName) {
+
+	public CategorySearch(double price, long categoryId, long supplierId, long productId, String categoryDescription,
+			String categoryName) {
 		super(price, categoryId, supplierId, productId);
 		this.categoryDescription = categoryDescription;
 		this.categoryName = categoryName;
 	}
-	
+
+	public CategorySearch(double price, long categoryId, long supplierId, long productId) {
+		super(price, categoryId, supplierId, productId);
+		// TODO Auto-generated constructor stub
+	}
+
 	
 	
 	
