@@ -1,15 +1,15 @@
-package com.cognizant.CogniCloth;
+package CogniCloth;
 
 import java.util.List;
 import java.util.Random;
 
 public class Category {
-	private long CategoryId;
-	private String CategoryName;
+	private long categoryID;
+	private String categoryName;
 	private static List<Integer> listOfIDs;
 	
 	public Category() {
-		this.CategoryId = generateID();
+		this.categoryID = generateID();
 	}
 	
 	public static int generateID() {
@@ -32,16 +32,16 @@ public class Category {
 		
 	
 	public long getCategoryId() {
-		return CategoryId;
+		return categoryID;
 	}
-	public void setCategoryId(long categoryId) {
-		CategoryId = categoryId;
+	public void setCategoryId(long categoryID) {
+		this.categoryID = categoryID;
 	}
 	public String getCategoryName() {
-		return CategoryName;
+		return categoryName;
 	}
 	public void setCategoryName(String categoryName) {
-		CategoryName = categoryName;
+		this.categoryName = categoryName;
 	}
 
 }
