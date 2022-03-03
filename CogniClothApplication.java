@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CogniClothApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CogniClothApplication.class, args);
+		
 	}
 
 }
