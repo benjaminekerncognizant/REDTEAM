@@ -1,7 +1,6 @@
-package com.cognizant.CogniCloth.entityclasses;
+package main.java.com.cognizant.CogniCloth.entityclasses;
 
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -17,9 +16,20 @@ public class Cart {
 	private long Cartid;
 	
 	@Column(name="customerid")
+	
 	private long Customerid;
 	
+	@Column(name="orderid")
+	private long Orderid;
 	
+	public long getOrderid() {
+		return Orderid;
+	}
+
+	public void setOrderid(long orderid) {
+		Orderid = orderid;
+	}
+
 	private List<Product> myCart;
 	
 	public Cart() {}

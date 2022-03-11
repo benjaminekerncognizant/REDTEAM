@@ -1,4 +1,4 @@
-package com.cognizant.CogniCloth.jdbc;
+package main.java.com.cognizant.CogniCloth.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

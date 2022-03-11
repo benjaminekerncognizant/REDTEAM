@@ -1,4 +1,4 @@
-package com.cognizant.CogniCloth.entityclasses;
+package main.java.com.cognizant.CogniCloth.entityclasses;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

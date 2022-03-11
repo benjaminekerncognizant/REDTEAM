@@ -1,9 +1,9 @@
-package com.cognizant.CogniCloth.jdbc;
+package main.java.com.cognizant.CogniCloth.jdbc;
 
 import java.sql.Statement;
 
-import com.cognizant.CogniCloth.DAo.ProductSearchDao;
-import com.cognizant.CogniCloth.entityclasses.Product;
+import main.java.com.cognizant.CogniCloth.dao.ProductSearchDao;
+import main.java.com.cognizant.CogniCloth.entityclasses.Product;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

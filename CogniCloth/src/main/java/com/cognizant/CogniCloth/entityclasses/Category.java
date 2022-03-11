@@ -1,4 +1,4 @@
-package com.cognizant.CogniCloth.entityclasses;
+package main.java.com.cognizant.CogniCloth.entityclasses;
 
 import java.util.ArrayList;
 import java.util.List;

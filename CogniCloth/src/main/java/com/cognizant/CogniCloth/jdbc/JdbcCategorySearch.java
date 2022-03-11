@@ -1,11 +1,8 @@
-
-package com.cognizant.CogniCloth.jdbc;
+package main.java.com.cognizant.CogniCloth.jdbc;
 
 import java.sql.Statement;
-
-import com.cognizant.CogniCloth.DAo.CategorySearchDao;
-import com.cognizant.CogniCloth.entityclasses.Category;
-
+import main.java.com.cognizant.CogniCloth.dao.CategorySearchDao;
+import main.java.com.cognizant.CogniCloth.entityclasses.Category;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
