@@ -1,5 +1,6 @@
-package com.cognizant.CogniCloth.DAo;
+package main.java.com.cognizant.CogniCloth.dao;
 
 public class CustomerDao {
 
+	
 }
