@@ -31,13 +31,15 @@ public void deletebyCartid(int id)
 {
 	Session session = this.sessionfactory.getCurrentSession();
 	String sql ="delete from"+Cart.class.getName();
-	 session.delete(sql,Cart.class);			
+	session.delete("from " + Cart.class.getName() + " where id = " + id);
+	//session.delete(sql,Cart.class); not totally sure if this is correct or the line above
+	//try testing both lines and see
 }
 
 public List<Cart> cartlist()
 {
   Session session = this.sessionfactory.getCurrentSession();
-  Query q = session.createQuery("from"+Cart.class.getName());
+  Query q = session.createQuery("from "+Cart.class.getName());
   List<Cart> cartlist = q.list();
   return cartlist;
 	
