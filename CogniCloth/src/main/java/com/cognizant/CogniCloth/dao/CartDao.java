@@ -30,10 +30,8 @@ public Cart insert(Cart cart) throws Exception
 public void deletebyCartid(int id)
 {
 	Session session = this.sessionfactory.getCurrentSession();
-	//String sql ="delete from"+Cart.class.getName();
 	session.delete("from " + Cart.class.getName() + " where id = " + id);
-	//session.delete(sql,Cart.class); not totally sure if this is correct or the line above
-	//try testing both lines and see
+	
 }
 
 public List<Cart> cartlist()
