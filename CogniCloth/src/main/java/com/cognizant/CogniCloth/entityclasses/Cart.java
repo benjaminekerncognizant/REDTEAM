@@ -1,5 +1,6 @@
 package main.java.com.cognizant.CogniCloth.entityclasses;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,11 +26,16 @@ public class Cart {
 	public long getOrderid() {
 		return Orderid;
 	}
+	private final List<Cart> cartlist = new ArrayList<Cart>();
 
 	public void setOrderid(long orderid) {
 		Orderid = orderid;
 	}
-
+	    public List<Cart> getCarts()
+	    {
+	       return this.cartlist;
+	    	
+	    }
 	private List<Product> myCart;
 	
 	public Cart() {}
