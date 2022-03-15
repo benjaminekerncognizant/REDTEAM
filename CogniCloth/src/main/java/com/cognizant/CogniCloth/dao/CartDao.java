@@ -34,7 +34,7 @@ public void deletebyCartid(int id)
 	 session.delete(sql,Cart.class);			
 }
 
-public List<Cart> list()
+public List<Cart> cartlist()
 {
   Session session = this.sessionfactory.getCurrentSession();
   Query q = session.createQuery("from"+Cart.class.getName());
