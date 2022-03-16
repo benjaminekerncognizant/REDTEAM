@@ -20,39 +20,25 @@ public class JdbcProductSearch implements ProductSearchDao
 	}
 	public void select(Product p) 
 	{
-		try 
-			{ 
-		    	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cogniclothdb","root","root");
-		    	String sql = "Select * from products";
-		    	Statement smt = con.createStatement();
-		    	ResultSet r = smt.executeQuery(sql);
-	
-		    	while (r.next())
-		    	{
-		    		int productID=r.getInt("productid");
-		    		p.setProductID(productID);
-				
-					int supplierID=r.getInt("supplierid");
-					p.setSupplierID(supplierID);
-					
-					long categoryID=r.getLong("categoryid");
-					p.setCategoryID(categoryID);
-					
-					float price=r.getLong("unitprice");
-					p.setPrice(price);
-					
-					String productName=r.getString("productname");
-					p.setProductName(productName);
-					
-					String productDescription =r.getString("productdescription");
-					p.setProductDescription(productDescription);
-			}	
+		String productName;
+		try { 
+			Connection con = DBConnection.getConnection();
+			Statement smt = con.createStatement();
+			String sql = "SELECT * FROM Products WHERE productName LIKE %" + p.getProductName() + "%";
+			ResultSet r = smt.executeQuery(sql);
+			StringBuilder sb = new StringBuilder();
+
+			while (r.next()) {
+				productName = r.getString("productName");
+				sb.append(productName);
+				sb.append(", ");
+			}
+			sb.delete(sb.length()-2, sb.length());
+			System.out.println(sb.toString());
 		}
-	catch(SQLException e )
-		{
+		catch(SQLException e ) {
 		  e.printStackTrace();
 		}
-
 	}
 
 
@@ -63,7 +49,7 @@ public class JdbcProductSearch implements ProductSearchDao
 	}
 		
 	public void delete(Product p) {}
-
+		
 	}
 	
 
