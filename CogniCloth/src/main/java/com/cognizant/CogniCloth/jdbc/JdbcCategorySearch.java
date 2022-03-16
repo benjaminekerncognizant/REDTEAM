@@ -19,19 +19,18 @@ public class JdbcCategorySearch implements CategorySearchDao
 	{
 		try 
 		{    
-		    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cogniclothdb","root","root");
+		        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cogniclothdb","root","root");
 			String sql = "Select * from categories";
 			Statement smt = con.createStatement();
 			ResultSet r = smt.executeQuery(sql);
 	
-			while (r.next())
-		    {
+			while (r.next()) {
 				long categoryID=r.getLong("categoryid");
 				c.setCategoryId(categoryID);
 				
 				String categoryName=r.getString("categoryname");
 				c.setCategoryName(categoryName);
-		     }
+		  	}
 		  }
 	catch(SQLException e )
 		{
